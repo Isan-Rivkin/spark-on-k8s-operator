@@ -7,8 +7,8 @@
 * [Handling Application Restart](#handling-application-restart)
 * [Handling Retries of Failed Submissions](#handling-retries-of-failed-submissions)
 * [Mutating Admission Webhook](#mutating-admission-webhook)
-* [Command-line Tool: Sparkctl](#command-line-tool: sparkctl)
-
+* [Command-line Tool: Sparkctl](#command-line-tool-sparkctl)
+  
 ## Introduction
 
 In Spark 2.3, Kubernetes becomes an official scheduler backend for Spark, additionally to the standalone scheduler, Mesos, and Yarn. Compared with the alternative approach of deploying a standalone Spark cluster on top of Kubernetes and submit applications to run on the standalone cluster, having Kubernetes as a native scheduler backend offers some important benefits as discussed in [SPARK-18278](https://issues.apache.org/jira/browse/SPARK-18278) and is a huge leap forward. However, the way life cycle of Spark applications are managed, e.g., how applications get submitted to run on Kubernetes and how application status is tracked, are vastly different from that of other types of workloads on Kubernetes, e.g., Deployments, DaemonSets, and StatefulSets. The Kubernetes Operator for Apache Spark reduces the gap and allow Spark applications to be specified, run, and monitored idiomatically on Kubernetes.
